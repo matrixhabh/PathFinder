@@ -1,0 +1,9 @@
+'use client'
+
+import { FormEvent, useState } from 'react'
+import { Compass, Eye, EyeOff, Sparkles } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+
+export default function RegisterPage() { const router=useRouter(); const [name,setName]=useState('Alex Morgan'); const [email,setEmail]=useState('alex@pathfinder.ai'); const [password,setPassword]=useState('pathfinder'); const [show,setShow]=useState(false); const [error,setError]=useState(''); function submit(e:FormEvent){e.preventDefault();if(!name||!email||password.length<6){setError('Complete every field. Passwords need 6+ characters.');return} localStorage.setItem('pathfinder-auth','true'); router.push('/')} return <main className="auth-page"><div className="auth-glow"/><section className="auth-card"><div className="brand auth-brand"><span className="brand-mark"><Compass size={19}/></span><span><b>PathFinder</b><small>AI CAREER NAVIGATOR</small></span></div><div className="auth-copy"><span className="eyebrow accent">START YOUR PATH</span><h1>Turn curiosity into <span className="accent">momentum.</span></h1><p>Build a career plan that gets smarter with every step.</p></div><form onSubmit={submit}><label>Your name<input value={name} onChange={e=>setName(e.target.value)}/></label><label>Email<input type="email" value={email} onChange={e=>setEmail(e.target.value)}/></label><label>Password<div className="password-field"><input type={show?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)}/><button type="button" onClick={()=>setShow(!show)} aria-label="Toggle password">{show?<EyeOff size={16}/>:<Eye size={16}/>}</button></div></label>{error&&<p className="form-error">{error}</p>}<button className="primary-button auth-submit" type="submit"><Sparkles size={16}/> Create my path</button></form><p className="auth-note">Demo mode keeps your profile in this browser only.</p></section></main> }
+
+export const dynamic='force-dynamic'
