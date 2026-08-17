@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   generator: 'PathFinder AI',
 }
 
-export const viewport: Viewport = { colorScheme: 'light dark', themeColor: '#17122f', width: 'device-width', initialScale: 1, userScalable: true }
+export const viewport: Viewport = { colorScheme: 'light dark', themeColor: '#070707', width: 'device-width', initialScale: 1, userScalable: true }
 
 const themeBootstrap = `(()=>{try{const saved=localStorage.getItem('pathfinder-theme');const dark=saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',dark);document.documentElement.dataset.theme=dark?'dark':'light'}catch{}})()`
 

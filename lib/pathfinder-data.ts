@@ -6,7 +6,7 @@ export type Skill = {
   score: number
   target: number
   status: SkillStatus
-  color: 'indigo' | 'teal' | 'amber' | 'rose'
+  color: 'orange' | 'teal' | 'amber' | 'rose'
 }
 
 export type RoadmapPhase = {
@@ -33,11 +33,11 @@ export const learner = {
 }
 
 export const skills: Skill[] = [
-  { name: 'Product Strategy', category: 'Foundation', score: 82, target: 85, status: 'strong', color: 'indigo' },
+  { name: 'Product Strategy', category: 'Foundation', score: 82, target: 85, status: 'strong', color: 'orange' },
   { name: 'UX Research', category: 'Foundation', score: 91, target: 85, status: 'strong', color: 'teal' },
   { name: 'AI Product Thinking', category: 'AI fluency', score: 58, target: 82, status: 'building', color: 'amber' },
   { name: 'Prompt Engineering', category: 'AI fluency', score: 41, target: 76, status: 'gap', color: 'rose' },
-  { name: 'Rapid Prototyping', category: 'Execution', score: 65, target: 80, status: 'building', color: 'indigo' },
+  { name: 'Rapid Prototyping', category: 'Execution', score: 65, target: 80, status: 'building', color: 'orange' },
   { name: 'Data Storytelling', category: 'Execution', score: 47, target: 74, status: 'gap', color: 'rose' },
 ]
 
@@ -66,7 +66,7 @@ export const todayFocus = [
 ]
 
 export const recommendations = [
-  { title: 'Build your first AI flow', reason: 'Closes your highest-impact gap', match: 94, tag: 'Best next step', tone: 'indigo' },
+  { title: 'Build your first AI flow', reason: 'Closes your highest-impact gap', match: 94, tag: 'Best next step', tone: 'orange' },
   { title: 'Prompt patterns for designers', reason: 'Strengthens your AI fluency', match: 88, tag: '15 min lesson', tone: 'teal' },
   { title: 'Choosing AI product metrics', reason: 'Prepares your next roadmap phase', match: 76, tag: 'Coming next', tone: 'amber' },
 ]
